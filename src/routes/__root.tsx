@@ -11,6 +11,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import ChatBot from "@/components/ChatBot";
 
 function NotFoundComponent() {
   return (
@@ -77,19 +79,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Flower Arrange — Events · Decor · Memories" },
+      {
+        name: "description",
+        content:
+          "Flower Arrange designs luxury weddings, proposals, birthdays, anniversaries and intimate celebrations with premium decor, photography and catering.",
+      },
+      { name: "author", content: "Flower Arrange" },
+      { property: "og:title", content: "Flower Arrange — Events · Decor · Memories" },
+      {
+        property: "og:description",
+        content: "Luxury event planning, decoration, photography & catering.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Flower Arrange — Events · Decor · Memories" },
+      { name: "description", content: "Flower Arrange Polish is a website for event decoration services, showcasing artists and services." },
+      { property: "og:description", content: "Flower Arrange Polish is a website for event decoration services, showcasing artists and services." },
+      { name: "twitter:description", content: "Flower Arrange Polish is a website for event decoration services, showcasing artists and services." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c352d15a-94e9-48d4-b8d9-bc8c19f8ba34" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c352d15a-94e9-48d4-b8d9-bc8c19f8ba34" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lato:wght@300;400;600;700&display=swap",
       },
     ],
   }),
@@ -120,6 +137,8 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <FloatingWhatsApp />
+      <ChatBot />
     </QueryClientProvider>
   );
 }

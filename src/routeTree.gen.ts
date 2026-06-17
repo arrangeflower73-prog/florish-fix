@@ -9,38 +9,308 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WeddingRouteImport } from './routes/wedding'
+import { Route as ProposalRouteImport } from './routes/proposal'
+import { Route as PhotographyRouteImport } from './routes/photography'
+import { Route as MakeupRouteImport } from './routes/makeup'
+import { Route as EngagementRouteImport } from './routes/engagement'
+import { Route as CelebrityRouteImport } from './routes/celebrity'
+import { Route as CateringRouteImport } from './routes/catering'
+import { Route as BridetobeRouteImport } from './routes/bridetobe'
+import { Route as BookingRouteImport } from './routes/booking'
+import { Route as BirthdayRouteImport } from './routes/birthday'
+import { Route as BabyshowerRouteImport } from './routes/babyshower'
+import { Route as AnniversaryRouteImport } from './routes/anniversary'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiChatRouteImport } from './routes/api/chat'
+import { Route as ServiceSubRouteImport } from './routes/$service.$sub'
 
+const WeddingRoute = WeddingRouteImport.update({
+  id: '/wedding',
+  path: '/wedding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProposalRoute = ProposalRouteImport.update({
+  id: '/proposal',
+  path: '/proposal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotographyRoute = PhotographyRouteImport.update({
+  id: '/photography',
+  path: '/photography',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MakeupRoute = MakeupRouteImport.update({
+  id: '/makeup',
+  path: '/makeup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EngagementRoute = EngagementRouteImport.update({
+  id: '/engagement',
+  path: '/engagement',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CelebrityRoute = CelebrityRouteImport.update({
+  id: '/celebrity',
+  path: '/celebrity',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CateringRoute = CateringRouteImport.update({
+  id: '/catering',
+  path: '/catering',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BridetobeRoute = BridetobeRouteImport.update({
+  id: '/bridetobe',
+  path: '/bridetobe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookingRoute = BookingRouteImport.update({
+  id: '/booking',
+  path: '/booking',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BirthdayRoute = BirthdayRouteImport.update({
+  id: '/birthday',
+  path: '/birthday',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BabyshowerRoute = BabyshowerRouteImport.update({
+  id: '/babyshower',
+  path: '/babyshower',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnniversaryRoute = AnniversaryRouteImport.update({
+  id: '/anniversary',
+  path: '/anniversary',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiChatRoute = ApiChatRouteImport.update({
+  id: '/api/chat',
+  path: '/api/chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiceSubRoute = ServiceSubRouteImport.update({
+  id: '/$service/$sub',
+  path: '/$service/$sub',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/anniversary': typeof AnniversaryRoute
+  '/babyshower': typeof BabyshowerRoute
+  '/birthday': typeof BirthdayRoute
+  '/booking': typeof BookingRoute
+  '/bridetobe': typeof BridetobeRoute
+  '/catering': typeof CateringRoute
+  '/celebrity': typeof CelebrityRoute
+  '/engagement': typeof EngagementRoute
+  '/makeup': typeof MakeupRoute
+  '/photography': typeof PhotographyRoute
+  '/proposal': typeof ProposalRoute
+  '/wedding': typeof WeddingRoute
+  '/$service/$sub': typeof ServiceSubRoute
+  '/api/chat': typeof ApiChatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/anniversary': typeof AnniversaryRoute
+  '/babyshower': typeof BabyshowerRoute
+  '/birthday': typeof BirthdayRoute
+  '/booking': typeof BookingRoute
+  '/bridetobe': typeof BridetobeRoute
+  '/catering': typeof CateringRoute
+  '/celebrity': typeof CelebrityRoute
+  '/engagement': typeof EngagementRoute
+  '/makeup': typeof MakeupRoute
+  '/photography': typeof PhotographyRoute
+  '/proposal': typeof ProposalRoute
+  '/wedding': typeof WeddingRoute
+  '/$service/$sub': typeof ServiceSubRoute
+  '/api/chat': typeof ApiChatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/anniversary': typeof AnniversaryRoute
+  '/babyshower': typeof BabyshowerRoute
+  '/birthday': typeof BirthdayRoute
+  '/booking': typeof BookingRoute
+  '/bridetobe': typeof BridetobeRoute
+  '/catering': typeof CateringRoute
+  '/celebrity': typeof CelebrityRoute
+  '/engagement': typeof EngagementRoute
+  '/makeup': typeof MakeupRoute
+  '/photography': typeof PhotographyRoute
+  '/proposal': typeof ProposalRoute
+  '/wedding': typeof WeddingRoute
+  '/$service/$sub': typeof ServiceSubRoute
+  '/api/chat': typeof ApiChatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/anniversary'
+    | '/babyshower'
+    | '/birthday'
+    | '/booking'
+    | '/bridetobe'
+    | '/catering'
+    | '/celebrity'
+    | '/engagement'
+    | '/makeup'
+    | '/photography'
+    | '/proposal'
+    | '/wedding'
+    | '/$service/$sub'
+    | '/api/chat'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/anniversary'
+    | '/babyshower'
+    | '/birthday'
+    | '/booking'
+    | '/bridetobe'
+    | '/catering'
+    | '/celebrity'
+    | '/engagement'
+    | '/makeup'
+    | '/photography'
+    | '/proposal'
+    | '/wedding'
+    | '/$service/$sub'
+    | '/api/chat'
+  id:
+    | '__root__'
+    | '/'
+    | '/anniversary'
+    | '/babyshower'
+    | '/birthday'
+    | '/booking'
+    | '/bridetobe'
+    | '/catering'
+    | '/celebrity'
+    | '/engagement'
+    | '/makeup'
+    | '/photography'
+    | '/proposal'
+    | '/wedding'
+    | '/$service/$sub'
+    | '/api/chat'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnniversaryRoute: typeof AnniversaryRoute
+  BabyshowerRoute: typeof BabyshowerRoute
+  BirthdayRoute: typeof BirthdayRoute
+  BookingRoute: typeof BookingRoute
+  BridetobeRoute: typeof BridetobeRoute
+  CateringRoute: typeof CateringRoute
+  CelebrityRoute: typeof CelebrityRoute
+  EngagementRoute: typeof EngagementRoute
+  MakeupRoute: typeof MakeupRoute
+  PhotographyRoute: typeof PhotographyRoute
+  ProposalRoute: typeof ProposalRoute
+  WeddingRoute: typeof WeddingRoute
+  ServiceSubRoute: typeof ServiceSubRoute
+  ApiChatRoute: typeof ApiChatRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/wedding': {
+      id: '/wedding'
+      path: '/wedding'
+      fullPath: '/wedding'
+      preLoaderRoute: typeof WeddingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/proposal': {
+      id: '/proposal'
+      path: '/proposal'
+      fullPath: '/proposal'
+      preLoaderRoute: typeof ProposalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photography': {
+      id: '/photography'
+      path: '/photography'
+      fullPath: '/photography'
+      preLoaderRoute: typeof PhotographyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/makeup': {
+      id: '/makeup'
+      path: '/makeup'
+      fullPath: '/makeup'
+      preLoaderRoute: typeof MakeupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/engagement': {
+      id: '/engagement'
+      path: '/engagement'
+      fullPath: '/engagement'
+      preLoaderRoute: typeof EngagementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/celebrity': {
+      id: '/celebrity'
+      path: '/celebrity'
+      fullPath: '/celebrity'
+      preLoaderRoute: typeof CelebrityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/catering': {
+      id: '/catering'
+      path: '/catering'
+      fullPath: '/catering'
+      preLoaderRoute: typeof CateringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bridetobe': {
+      id: '/bridetobe'
+      path: '/bridetobe'
+      fullPath: '/bridetobe'
+      preLoaderRoute: typeof BridetobeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/booking': {
+      id: '/booking'
+      path: '/booking'
+      fullPath: '/booking'
+      preLoaderRoute: typeof BookingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/birthday': {
+      id: '/birthday'
+      path: '/birthday'
+      fullPath: '/birthday'
+      preLoaderRoute: typeof BirthdayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/babyshower': {
+      id: '/babyshower'
+      path: '/babyshower'
+      fullPath: '/babyshower'
+      preLoaderRoute: typeof BabyshowerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/anniversary': {
+      id: '/anniversary'
+      path: '/anniversary'
+      fullPath: '/anniversary'
+      preLoaderRoute: typeof AnniversaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +318,40 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/chat': {
+      id: '/api/chat'
+      path: '/api/chat'
+      fullPath: '/api/chat'
+      preLoaderRoute: typeof ApiChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$service/$sub': {
+      id: '/$service/$sub'
+      path: '/$service/$sub'
+      fullPath: '/$service/$sub'
+      preLoaderRoute: typeof ServiceSubRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnniversaryRoute: AnniversaryRoute,
+  BabyshowerRoute: BabyshowerRoute,
+  BirthdayRoute: BirthdayRoute,
+  BookingRoute: BookingRoute,
+  BridetobeRoute: BridetobeRoute,
+  CateringRoute: CateringRoute,
+  CelebrityRoute: CelebrityRoute,
+  EngagementRoute: EngagementRoute,
+  MakeupRoute: MakeupRoute,
+  PhotographyRoute: PhotographyRoute,
+  ProposalRoute: ProposalRoute,
+  WeddingRoute: WeddingRoute,
+  ServiceSubRoute: ServiceSubRoute,
+  ApiChatRoute: ApiChatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
