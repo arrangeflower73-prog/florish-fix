@@ -11,7 +11,7 @@ export const PORTFOLIO_IMAGES = [
 ];
 
 export const LOGO_URL =
-  "https://res.cloudinary.com/dfo4kej9j/image/upload/v1781334280/1000855026-removebg-preview_sryxds.png";
+  "https://res.cloudinary.com/dtq4xwxgn/image/upload/v1781700693/WhatsApp_Image_2026-06-09_at_9.44.15_PM_4_ievhwk.png";
 
 export const OUR_WORK_IMAGES = [
   "https://res.cloudinary.com/dfo4kej9j/image/upload/v1781299728/Screenshot_2026-06-12-23-48-27-63_a23b203fd3aafc6dcb84e438dda678b6_wjwrk9.jpg",
