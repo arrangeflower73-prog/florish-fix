@@ -236,6 +236,9 @@ function Home() {
             <h2 className="mt-3 font-display text-4xl md:text-5xl text-burgundy">
               Crafted With Care, Delivered With Grace
             </h2>
+          <p className="mt-4 font-display text-lg md:text-xl text-gold tracking-[0.2em] uppercase">
+            Since 2014 · 12 Years of Experience
+          </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {WHY.map((w) => (
