@@ -97,7 +97,7 @@ const OPTIONAL = [
 ];
 
 const TERMS = [
-  "10% token advance, 75% payment 15 days before the function, remaining after the function.",
+  "30% token advance, 75% payment 15 days before the function, remaining after the function.",
   "Advance is non-refundable on cancellation but adjustable for future same-nature catering.",
   "Charged on guaranteed plates or actual consumption, whichever is higher.",
   "After token advance, a venue visit is conducted for planning.",
