@@ -91,7 +91,7 @@ export default function ChatBot() {
   }
 
   return (
-    <div style={{ position: "fixed", bottom: 96, right: 24, zIndex: 9999 }}>
+    <div style={{ position: "fixed", bottom: 160, right: 24, zIndex: 9999 }}>
       {open && (
         <div
           style={{
